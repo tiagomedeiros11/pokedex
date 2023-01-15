@@ -1,6 +1,5 @@
-const offset = 0;
-const limit = 10;
-const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
+
+// função para converter o pokemon em um item da lista da pokedex em html
 
 function converterPokemonParaListaNoHTML(pokemon) {
   return `
@@ -23,13 +22,10 @@ function converterPokemonParaListaNoHTML(pokemon) {
 
 const $pokemonsNaOL = document.getElementById("listaDePokemons");
 
-fetch(url)
-  .then((response) => response.json())
-  .then((jsonBody) => jsonBody.results)
-  .then((pokemonList) => {
-    for (let i = 0; i < pokemonList.length; i++) {
-      const pokemon = pokemonList[i];
-      $pokemonsNaOL.innerHTML += converterPokemonParaListaNoHTML(pokemon);
-    }
-  })
-  .catch((error) => console.error(error));
+//função que itera a lista do retorno da função get.Pokemons e adiciona no html
+
+pokeApi.getPokemons().then((pokemonList = []) => {
+  $pokemonsNaOL.innerHTML += pokemonList.map(converterPokemonParaListaNoHTML).join('')
+});
+
+
