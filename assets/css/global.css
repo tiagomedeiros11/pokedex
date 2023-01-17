@@ -58,6 +58,14 @@
   background-color: #a8b820;
 }
 
+.flying{
+  background-color: #c03028;
+}
+
+.normal{
+  background-color: #a8a878;
+}
+
 .pokemon .detail {
   display: flex;
   flex-direction: row;
@@ -98,4 +106,5 @@
   font-size: 0.8rem;
   color: #fff;
   filter: brightness(1.1);
+  text-align: center;
 }
