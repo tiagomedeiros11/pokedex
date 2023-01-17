@@ -4,8 +4,10 @@
 }
 
 .content {
-  padding: 1rem;
   background-color: beige;
+}
+.content h1{
+  text-align: center;
 }
 
 .pokemons {
@@ -43,19 +45,20 @@
 }
 
 .grass{
-  background-color: #78c850;
+  background: linear-gradient(45deg, #a1d189 0%,#78c850 100%);
 }
 
 .fire{
-  background-color: #f08030;
+  
+  background: linear-gradient(45deg, #f0af81 0%,#f08030 100%);
 }
 
 .water{
-  background-color: #6890f0 ;
+  background: linear-gradient(45deg, #a7cfdf 0%,#23538a 100%);
 }
 
 .bug{
-  background-color: #a8b820;
+  background: linear-gradient(45deg, #a8b820 0%,#8e9459 100%);
 }
 
 .flying{
@@ -63,7 +66,8 @@
 }
 
 .normal{
-  background-color: #a8a878;
+  background: linear-gradient(45deg, #a1a138 0%,#8e9459 100%);
+  
 }
 
 .pokemon .detail {
@@ -74,7 +78,6 @@
 }
 
 .pokemons img {
-  max-width: 100%;
   height: 70px;
 }
 
