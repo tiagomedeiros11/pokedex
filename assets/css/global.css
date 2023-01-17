@@ -39,7 +39,23 @@
   margin: 0.5rem;
   padding: 1rem;
   border-radius: 12px;
-  background-color: #14a06f;
+  background-color: #78c850;
+}
+
+.grass{
+  background-color: #78c850;
+}
+
+.fire{
+  background-color: #f08030;
+}
+
+.water{
+  background-color: #6890f0 ;
+}
+
+.bug{
+  background-color: #a8b820;
 }
 
 .pokemon .detail {
@@ -77,9 +93,9 @@
   display: flex;
   margin: 0.25rem 0;
   padding: 0.25rem 0.5rem;
-  background-color: rgb(130, 216, 190);
   border-radius: 10px;
   opacity: 80%;
   font-size: 0.8rem;
   color: #fff;
+  filter: brightness(1.1);
 }
