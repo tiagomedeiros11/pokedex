@@ -46,6 +46,22 @@
   background-color: #78c850;
 }
 
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+.pagination button{
+  background-color: #6c79db;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  padding: .10rem .25rem;
+}
+
 .grass{
   background: linear-gradient(45deg, #a1d189 0%,#78c850 100%);
 }
