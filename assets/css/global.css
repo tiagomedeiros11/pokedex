@@ -17,16 +17,16 @@
   grid-template-columns: 1fr;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 ;
 }
 @media screen and (min-width: 340px) {
   .pokemons {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 @media screen and (min-width: 600px) {
   .content {
-    max-width: 600px;
+    width: fit-content;
     height: auto;
     margin: 10px auto;
     border-radius: 10px;
@@ -43,7 +43,6 @@
   margin: 0.5rem;
   padding: 1rem;
   border-radius: 12px;
-  background-color: #78c850;
 }
 
 .pagination{
@@ -85,6 +84,23 @@
 
 .normal{
   background: linear-gradient(45deg, #a1a138 0%,#8e9459 100%);
+  
+}
+.electric{
+  background: linear-gradient(45deg, #f1f11d 0%,#bebe01 100%);
+  
+}
+.poison{
+  background: linear-gradient(45deg, #8e04ff 0%,#be6eff 100%);
+  
+}
+.ground{
+  background: linear-gradient(45deg, #723700 0%,#6e4a28 100%);
+  
+}
+
+.fairy{
+  background: linear-gradient(45deg, #ff91d5 0%,#812b60 100%);
   
 }
 

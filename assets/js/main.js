@@ -1,8 +1,11 @@
 
-
+const $pokemonsNaOL = document.getElementById("listaDePokemons");
+const $loadMoreButton = document.getElementById('LoadMore');
+const limit = 6;
+let offset = 0;
 
 // função para converter o pokemon em um item da lista da pokedex em html
-function converterPokemonParaListaNoHTML(pokemon) {
+function converterPokemonParaListaDoHTML(pokemon) {
   return `
     <li class="pokemon ${pokemon.type} ">
                 <span class="number">#0${pokemon.number}</span>
@@ -10,7 +13,7 @@ function converterPokemonParaListaNoHTML(pokemon) {
 
                 <div class="detail">
                     <ol class="types">
-                        ${pokemon.types.map((type) => `<li class="type ${pokemon.type}">${type}</li>`).join('')}
+                        ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
                     </ol>
                     <img src="${pokemon.image}"
                         alt="${pokemon.name}">
@@ -20,11 +23,18 @@ function converterPokemonParaListaNoHTML(pokemon) {
     `;
 }
 
-const $pokemonsNaOL = document.getElementById("listaDePokemons");
 
 //função que itera a lista do retorno da função get.Pokemons e adiciona no html
-pokeApi.getPokemons().then((pokemonList = []) => {
-  $pokemonsNaOL.innerHTML += pokemonList.map(converterPokemonParaListaNoHTML).join('')
-});
+function loadPokemonItens(offset, limit) {
+  pokeApi.getPokemons(offset, limit).then((pokemonList = []) => {
+    const newPokemon = pokemonList.map(converterPokemonParaListaDoHTML).join('')
+    $pokemonsNaOL.innerHTML += newPokemon;
+  });
+}
 
+loadPokemonItens(offset, limit)
 
+$loadMoreButton.addEventListener('click', () => {
+  offset += limit;
+  loadPokemonItens(offset, limit)
+})
